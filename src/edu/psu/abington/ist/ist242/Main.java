@@ -71,7 +71,7 @@ public class Main {
                 case SALES_CODE: //Sales Person Page
                     Scanner input = new Scanner(System.in);
                     String answer = "";
-                    System.out.print("What would you like to do: [A]dd in inventory, [B]rowse Inventory, [D]elete an item from Inventory: ");
+                    System.out.print("What would you like to do: \n[A]dd in inventory \n[B]rowse Inventory \n[D]elete an item from Inventory\nPlease Choose your option: ");
                     answer = input.nextLine().toUpperCase() + " ";
                     char firstChar = answer.charAt(0);
                     switch(firstChar){
