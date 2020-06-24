@@ -1,12 +1,12 @@
 /*
-Project: Lab 9
-Purpose Details: Pizza ordering application
+Project: Car Design
+Purpose Details: Car Dealership Application
 Course: IST 242
-Author:
-Date Developed:
-Last Date Changed:
-Rev:
-
+Team 4
+Developed: June 14, 2020
+Last date Changed: June 21, 2020
+Rev: 1
+*/
 //jsut a demo to push
  */
 package edu.psu.abington.ist.ist242;
