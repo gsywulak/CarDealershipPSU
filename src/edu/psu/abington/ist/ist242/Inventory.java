@@ -6,8 +6,11 @@ Author:
 Date Developed:
 Last Date Changed:
 Rev:
+
+//jsut a demo to push
  */
 package edu.psu.abington.ist.ist242;
+import java.lang.reflect.Array;
 import java.util.*;
 public class Inventory {
     //Class Level Variables - Protect the data
@@ -72,14 +75,39 @@ public class Inventory {
     //add method to change menuItem price depending on the size
     public static void listMenu(ArrayList<Inventory> invList) {
         for (Inventory invItem : invList) {
-            System.out.println(invItem.getMake());
+            //System.out.println(invItem.getMake());
+            System.out.printf("%-1s | %-12s | %-12s | %-12s | %-12s\n", invItem.getVin(), invItem.getYear(), invItem.getMake(), invItem.getModel(), "$" + invItem.getPrice());
 
         }
     }
-    public Inventory printMenuInfo() {
-        //System.out.print("-------------------------\n");​
-        System.out.printf("%-1s | %-12s | %-12s | %-12s | %-12s\n", vin, year, make, model, "$" + price);
-        return null;
+
+    public Inventory addInventory() {
+        Inventory invt = new Inventory();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please Enter a Vin Number: ");
+        invt.setVin(input.nextInt());
+        input.nextLine();
+        System.out.print("Please Enter the Make of Car: ");
+        invt.setMake(input.nextLine());
+        System.out.print("Please Enter the Model of Car: ");
+        invt.setModel(input.nextLine());
+        System.out.print("Please Enter the year of Car: ");
+        invt.setYear(input.nextLine());
+        System.out.print("Please Enter the price of Car: ");
+        invt.setPrice(input.nextDouble());
+        return invt;
     }
 
+    public static void removeCar(ArrayList<Inventory> iList){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter a Vin number to delete the Car: ");
+        int num = input.nextInt();
+
+        for (Inventory inv : iList) {
+            if (num == inv.getVin()) {
+                iList.remove(inv);
+                break;
+            }
+        }
+    }
 }

@@ -19,11 +19,11 @@ public class Customer {
     public Customer addCustomer() {
         Customer cust = new Customer(cCount++);
         Scanner scnr = new Scanner(System.in);
-        System.out.println("Please Enter your Name: ");
+        System.out.print("Please Enter your Name: ");
         cust.setCustomerName(scnr.nextLine());
-        System.out.println("Please Enter your Address: ");
+        System.out.print("Please Enter your Address: ");
         cust.setCustAddress(scnr.nextLine());
-        System.out.println("Please Enter your Phone: ");
+        System.out.print("Please Enter your Phone: ");
         cust.setCustomerPhone(scnr.nextLine());
         cust.setCustomerId(cCount);
         return cust;
@@ -47,11 +47,6 @@ public class Customer {
         this.custName  = name;
         this.custPhone = phoneNumber;
     }
-    public static void listCust(ArrayList<Customer> cList) {
-        for (Customer customer : cList) {
-            System.out.println(customer.getCustomerName());
-        }
-    }
 
     // SETTERS AND GETTERS --------------------------------------------------------------------------------------------------------------------------------------------------
     public int getCustomerId() { return customerId; }
@@ -70,10 +65,4 @@ public class Customer {
         return input;
     }
 
-    /*public void printCustomers() {
-        getCustomerId();
-        getCustomerName();
-        getCustAddress();
-        getCustomerPhone();
-    }*/
 }
